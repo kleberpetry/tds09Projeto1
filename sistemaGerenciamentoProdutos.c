@@ -59,7 +59,45 @@ bool verificaEstoque(int codigo,int quantidade){
 }
 
 void venda(){
-	
+	int codigo;
+	bool concluida=false;
+	do{
+		system("cls");
+		printf("\nDigite o código do produto: ");
+		scanf("%d",&codigo);
+		if(codigo!=0){
+			if(buscar(codigo)==true){
+				printf("\nDigite a quantidade do produto: ");
+				int qtde;
+				scanf("%d",&qtde);
+				if(verificaEstoque(codigo,qtde)==true){
+					double total;
+					total=qtde*produtos[codigo-1].preco;
+					produtos[codigo-1].estoque-=qtde;
+					printf("\nvalor total: %.2lf",total);
+					printf("\nEstoque restante: %d"
+					,produtos[codigo-1].estoque);
+					printf("\ndeseja continuar 1-sim 2-não");
+					int continuar;
+					scanf("%d",&continuar);
+					if(continuar==2){
+						concluida=true;
+					}
+				}else{
+					printf("\nQuantidade solicitada acima do estoque");
+					system("pause");
+				}
+			}else{
+				printf("\nProduto não existe, digite outro\n");
+				system("pause");
+			}
+		}else{
+			concluida=true;
+		}
+		
+	}while(concluida==false);
+		
+	system("pause");
 }
 
 void menu(){
@@ -86,8 +124,7 @@ main(){
 				listar();
 			break;
 			case 3:
-				printf("ok3");
-				system("pause");
+				venda();
 			break;
 			case 4:
 				printf("\nDigite o código do produto: ");
@@ -96,6 +133,21 @@ main(){
 					printf("\nproduto existe");
 				}else{
 					printf("\nproduto não existe");
+				}
+				system("pause");
+			break;
+			case 5:
+				printf("\nDigite o código do produto: ");
+				scanf("%d",&codigo);
+				printf("\nDigite a quantidade de estoque desejada: ");
+				int qtde;
+				scanf("%d",&qtde);
+				if(buscar(codigo)==true && verificaEstoque(codigo,qtde)==true){
+					printf("\ntem em estoque, quantidade: %d\n"
+					,produtos[codigo-1].estoque);
+				}else{
+					printf("\nNão tem estoque, quantidade: %d\n"
+					,produtos[codigo-1].estoque);
 				}
 				system("pause");
 			break;
