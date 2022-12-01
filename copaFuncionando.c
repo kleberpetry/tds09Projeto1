@@ -72,74 +72,21 @@ void apurar(){
 		switch(posicao){
 			case 0:
 				times[time].classificacao=4;
-				times[5].classificacao=times[4].classificacao;
-				strcpy(times[5].nomeTime,times[4].nomeTime);
-				times[5].pontuacao=times[4].pontuacao;
-				times[5].saldoGol=times[4].saldoGol;
-				
-				times[4].classificacao=times[time].classificacao;
-				strcpy(times[4].nomeTime,times[time].nomeTime);
-				times[4].pontuacao=times[time].pontuacao;
-				times[4].saldoGol=times[time].saldoGol;
-				
-				times[time].classificacao=times[5].classificacao;
-				strcpy(times[time].nomeTime,times[5].nomeTime);
-				times[time].pontuacao=times[5].pontuacao;
-				times[time].saldoGol=times[5].saldoGol;
-				
+												
 				break;
 			case 1:
 				times[time].classificacao=3;
-				times[5].classificacao=times[3].classificacao;
-				strcpy(times[5].nomeTime,times[3].nomeTime);
-				times[5].pontuacao=times[3].pontuacao;
-				times[5].saldoGol=times[3].saldoGol;
 				
-				times[3].classificacao=times[time].classificacao;
-				strcpy(times[3].nomeTime,times[time].nomeTime);
-				times[3].pontuacao=times[time].pontuacao;
-				times[3].saldoGol=times[time].saldoGol;
-				
-				times[time].classificacao=times[5].classificacao;
-				strcpy(times[time].nomeTime,times[5].nomeTime);
-				times[time].pontuacao=times[5].pontuacao;
-				times[time].saldoGol=times[5].saldoGol;
 				break;
 			case 2:
 				times[time].classificacao=2;
 				
-				times[5].classificacao=times[2].classificacao;
-				strcpy(times[5].nomeTime,times[2].nomeTime);
-				times[5].pontuacao=times[2].pontuacao;
-				times[5].saldoGol=times[2].saldoGol;
 				
-				times[2].classificacao=times[time].classificacao;
-				strcpy(times[2].nomeTime,times[time].nomeTime);
-				times[2].pontuacao=times[time].pontuacao;
-				times[2].saldoGol=times[time].saldoGol;
-				
-				times[time].classificacao=times[5].classificacao;
-				strcpy(times[time].nomeTime,times[5].nomeTime);
-				times[time].pontuacao=times[5].pontuacao;
-				times[time].saldoGol=times[5].saldoGol;
 				break;
 			case 3:
 				times[time].classificacao=1;
 				
-				times[5].classificacao=times[1].classificacao;
-				strcpy(times[5].nomeTime,times[1].nomeTime);
-				times[5].pontuacao=times[1].pontuacao;
-				times[5].saldoGol=times[1].saldoGol;
-				
-				times[1].classificacao=times[time].classificacao;
-				strcpy(times[1].nomeTime,times[time].nomeTime);
-				times[1].pontuacao=times[time].pontuacao;
-				times[1].saldoGol=times[time].saldoGol;
-				
-				times[time].classificacao=times[5].classificacao;
-				strcpy(times[time].nomeTime,times[5].nomeTime);
-				times[time].pontuacao=times[5].pontuacao;
-				times[time].saldoGol=times[5].saldoGol;
+			
 				break;
 		}
 	}
